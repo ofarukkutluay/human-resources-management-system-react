@@ -1,15 +1,18 @@
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
-import { Button } from "semantic-ui-react";
+import { Button, Container } from "semantic-ui-react";
 import Dashboard from "./layouts/Dashboard";
+import Navigation from "./layouts/Navigation";
 
 function App() {
   return (
     <div className="App">
-      
+      <Navigation />
+      <Container style={{marginTop:'0.5em'}} className="main">
         <Dashboard />
-        <Button>Tıkla</Button>
-      
+      </Container>
+
+      <Button>Tıkla</Button>
     </div>
   );
 }
