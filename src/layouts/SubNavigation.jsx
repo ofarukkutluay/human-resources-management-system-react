@@ -11,23 +11,23 @@ export default function SubNavigation() {
         </Menu.Item>
 
         <Menu.Item>
-          <Link to="/">Home</Link>
+          <Link to="/">Ana Sayfa</Link>
           <Menu.Menu>
-            <Menu.Item name="job-seeker">İş Arayanlar</Menu.Item>
+            <Menu.Item name="job-seeker"><Link to="/jobseekers">İş Arayanlar</Link></Menu.Item>
             <Menu.Item name="job-position"><Link to="/jobpositions">İş Pozisyonları</Link></Menu.Item>
-            <Menu.Item name="about">Remove</Menu.Item>
+            <Menu.Item name="curriculum-vitaes"><Link to="/curriculumvitaes">CV'ler</Link></Menu.Item>
           </Menu.Menu>
         </Menu.Item>
 
-        <Menu.Item name="browse">
-          <Icon name="grid layout" />
-          Browse
+        <Menu.Item name="addJobAdvertisement">
+          <Icon name="add" />
+          Yeni İlan Ekle
         </Menu.Item>
-        <Menu.Item name="messages">Messages</Menu.Item>
+        <Menu.Item name="messages">Mesajlar</Menu.Item>
 
         <Dropdown item text="More">
           <Dropdown.Menu>
-            <Dropdown.Item icon="edit" text="Edit Profile" />
+            <Dropdown.Item><Link to="/jobpositions"><Icon name="edit"/>İş Pozisyonları</Link></Dropdown.Item>
             <Dropdown.Item icon="globe" text="Choose Language" />
             <Dropdown.Item icon="settings" text="Account Settings" />
           </Dropdown.Menu>

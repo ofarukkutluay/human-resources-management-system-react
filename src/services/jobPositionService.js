@@ -1,8 +1,8 @@
 import axios from "axios";
-import { apiUrl } from "./constants/apiConst";
+import { apiJobPositionsGetAll } from "./constants/apiConst";
 
 export default class JobPositionService {
     getJobPosition (){
-        return axios.get(apiUrl + "/jobpositions/getAll")
+        return axios.get(apiJobPositionsGetAll)
     }
 }

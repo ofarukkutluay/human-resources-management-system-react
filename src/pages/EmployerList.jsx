@@ -17,6 +17,7 @@ export default function EmployerList() {
       <Table celled>
         <Table.Header>
           <Table.Row>
+          <Table.HeaderCell>#</Table.HeaderCell>
             <Table.HeaderCell>Company Name</Table.HeaderCell>
             <Table.HeaderCell>Web Site</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
@@ -28,6 +29,7 @@ export default function EmployerList() {
         <Table.Body>
           {employers.map((employer) => (
             <Table.Row key={employer.id}>
+              <Table.Cell>{employer.id}</Table.Cell>
               <Table.Cell>{employer.companyName}</Table.Cell>
               <Table.Cell>{employer.companyWebsite}</Table.Cell>
               <Table.Cell>{employer.email}</Table.Cell>
@@ -45,7 +47,7 @@ export default function EmployerList() {
         </Table.Body>
         <Table.Footer>
           <Table.Row>
-            <Table.HeaderCell colSpan="5">
+            <Table.HeaderCell colSpan="6">
               <Menu floated="right" pagination>
                 <Menu.Item as="a" icon>
                   <Icon name="chevron left" />

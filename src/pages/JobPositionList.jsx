@@ -17,6 +17,7 @@ export default function JobPositionList() {
       <Table celled>
         <Table.Header>
           <Table.Row>
+          <Table.HeaderCell>#</Table.HeaderCell>
             <Table.HeaderCell>Job Position Name</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
@@ -24,13 +25,14 @@ export default function JobPositionList() {
         <Table.Body>
           {jobPositions.map((jobPosition) => (
             <Table.Row key={jobPosition.id}>
+              <Table.Cell>{jobPosition.id}</Table.Cell>
               <Table.Cell>{jobPosition.name}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
         <Table.Footer>
           <Table.Row>
-            <Table.HeaderCell colSpan="1">
+            <Table.HeaderCell colSpan="2">
               <Menu floated="right" pagination>
                 <Menu.Item as="a" icon>
                   <Icon name="chevron left" />

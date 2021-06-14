@@ -38,8 +38,8 @@ export default function Navigation() {
             </Link>
           </Menu.Item>
           <Menu.Item
-            name="jobAdvertisement"
-            active={activeItem === "jobAdvertisement"}
+            name="jobAdvertisements"
+            active={activeItem === "jobAdvertisements"}
             onClick={handleItemClick}
           >
             İş İlanları
