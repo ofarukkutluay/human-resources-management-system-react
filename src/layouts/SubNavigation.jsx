@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Menu, Input, Icon, Dropdown } from "semantic-ui-react";
 
 export default function SubNavigation() {
@@ -10,10 +11,10 @@ export default function SubNavigation() {
         </Menu.Item>
 
         <Menu.Item>
-          Home
+          <Link to="/">Home</Link>
           <Menu.Menu>
-            <Menu.Item name="search">Search</Menu.Item>
-            <Menu.Item name="add">Add</Menu.Item>
+            <Menu.Item name="job-seeker">İş Arayanlar</Menu.Item>
+            <Menu.Item name="job-position"><Link to="/jobpositions">İş Pozisyonları</Link></Menu.Item>
             <Menu.Item name="about">Remove</Menu.Item>
           </Menu.Menu>
         </Menu.Item>
