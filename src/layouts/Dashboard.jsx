@@ -8,6 +8,8 @@ import JobPositionList from "../pages/JobPositionList";
 import PageNotFound from "../pages/PageNotFound";
 import { Switch } from "react-router-dom";
 import CurriculumVitaeList from "../pages/CurriculumVitaeList";
+import JobAdvertisementList from "../pages/JobAdvertisementList.jsx";
+import JobAdvertisementAdd from "../pages/JobAdvertisementAdd";
 
 export default function Dashboard() {
   return (
@@ -23,6 +25,8 @@ export default function Dashboard() {
               <Route path="/home" component={HomePage} />
               <Route path="/employers" component={EmployerList} />
               <Route path="/jobpositions" component={JobPositionList} />
+              <Route path="/jobadvertisements" component={JobAdvertisementList} />
+              <Route path="/jobadvertisement/add" component={JobAdvertisementAdd} />
               <Route path="/curriculumvitaes" component={CurriculumVitaeList} />
               <Route path="*" component={PageNotFound} />
             </Switch>
