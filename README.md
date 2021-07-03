@@ -1,6 +1,45 @@
+## Human Resources Management System
+
+Projenin backendi için ; https://github.com/dRcmd/human-resources-management-system
+
+#### Aynı Projeyi geliştiriyoruz,
+-------------------------------------------------------------------------------------------------------------------------------------------
+### Engin Demiroğ Java-React Kamp 12. Gün Ödev
+
+#### Yapılanlar;
+* WayOfWorking , WorkingTime oluşturuldu. 
+* Formik kullanılarak iş ilanı ekleme sayfası yazıldı.
+
+
+#### Ödev içeriği;
+Req 14 : İş verenler, iş ilanı paylaşırken işin yerinde veya uzaktan çalışma türlerinden hangisine uygun olduğunu seçilir kutudan girebilmelidir.
+
+Req 15 : İş verenler işin çalışma zamanı özelliğini seçilir kutudan girebilmelidir. (Örneğin : Yarı Zamanlı, tam zamanlı...)
+
+Req 16 : İş verenler tarafından girilen iş ilanları Hrms personeli tarafından onaylandığında yayına geçmelidir.
+
+Req 17 : Formik kullanarak formlarınızın tasarımını oluşturunuz. Backend'e bağlayınız (Araştırma ve uygulama) https://formik.org/
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+### Engin Demiroğ Java-React Kamp 11. Gün Ödev
+
+#### Yapılanlar;
+* Backend deki tüm controller için service yazıldı.
+* Tasarımsal olarak Componentler yazıldı.
+* UML Model Göreseli;
+
 ![Screenshot_1](https://user-images.githubusercontent.com/76197823/121951572-c2e25000-cd63-11eb-9b86-82dc0b6e9242.jpg)
 
+#### Ödev içeriği;
+HRMS sistemimizde tüm istekler için;
 
+* Bir adet React projesi oluşturunuz.
+* Component hiyerarşinizi "UML component diagram" tekniğini kullanarak modelleyiniz. (araştırma)
+* Model görselinizi github readme dosyanıza ekleyiniz.
+* React componentlerinizi oluşturunuz.
+* Tüm React Componentlerinizi sadece tasarımsal olarak oluşturunuz.
+* Tüm isterler için JavaScript servislerini ve axios kodlarını yazınız. Bunları React componentlerine bağlamayınız. (Post,Put,Delete araştırma)
+* Sadece listeleme olan isterleri JS servisinizle bağlayınız.
 
 _________________________________________________________________________________________________________________________--
 # Getting Started with Create React App
