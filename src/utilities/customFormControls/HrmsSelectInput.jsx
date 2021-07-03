@@ -1,24 +1,30 @@
-import { useField, Field } from 'formik'
-import React from 'react'
-import {  FormField,Label } from "semantic-ui-react";
+import { useField } from "formik";
+import React, { useState, useEffect } from "react";
+import { FormField, Label } from "semantic-ui-react";
 
-export default function HrmsSelectInput({...props}) {
+export default function HrmsSelectInput({ ...props }) {
+  const [field, meta] = useField(props);
+  const [array, setArray] = useState([]);
 
-    const [field,meta] = useField(props);
-    return (
-        <FormField error={meta.touched && !!meta.error} >
-            <Field as="select" name={field.name}>
-              {props.map((category) => {
-                return (
-                  <option key={category.categoryId} value={category.categoryId}>
-                    {category.categoryName}
-                  </option>
-                );
-              })}
-            </Field>
-            {meta.touched && !!meta.error ? (
-                <Label pointing basic color="red" content={meta.error}></Label>
-            ):null}
-        </FormField>
-    )
+  useEffect(() => {
+    setArray(props.state);
+  }, [props.state]);
+
+  // console.log(props)
+  // console.log(array)
+  return (
+    <FormField as="select" {...field} error={meta.touched && !!meta.error}>
+      <option label={props.label}></option>
+      {array.map((array) => {
+        return (
+          <option id={array.id} key={array.id} value={array.id}>
+            {array.name || array.schoolName}
+          </option>
+        );
+      })}
+      {meta.touched && !!meta.error ? (
+        <Label pointing basic color="red" content={meta.error}></Label>
+      ) : null}
+    </FormField>
+  );
 }

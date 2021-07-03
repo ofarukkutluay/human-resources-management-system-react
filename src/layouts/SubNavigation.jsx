@@ -24,7 +24,7 @@ export default function SubNavigation() {
 
         <Menu.Item name="addJobAdvertisement">
           <Link to="/jobadvertisement/add">
-            <Icon name="add" />
+            <Icon name="add" corner="top right" />
             Yeni İlan Ekle
           </Link>
         </Menu.Item>
