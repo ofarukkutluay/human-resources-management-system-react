@@ -10,6 +10,7 @@ import { Switch } from "react-router-dom";
 import CurriculumVitaeList from "../pages/CurriculumVitaeList";
 import JobAdvertisementList from "../pages/JobAdvertisementList.jsx";
 import JobAdvertisementAdd from "../pages/JobAdvertisementAdd";
+import AdminDashboard from "../pages/admin/AdminDashboard";
 
 export default function Dashboard() {
   return (
@@ -28,6 +29,7 @@ export default function Dashboard() {
               <Route path="/jobadvertisements" component={JobAdvertisementList} />
               <Route path="/jobadvertisement/add" component={JobAdvertisementAdd} />
               <Route path="/curriculumvitaes" component={CurriculumVitaeList} />
+              <Route path="/admin" component={AdminDashboard} />
               <Route path="*" component={PageNotFound} />
             </Switch>
           </Grid.Column>

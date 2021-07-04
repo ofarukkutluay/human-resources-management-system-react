@@ -78,7 +78,7 @@ export default function JobAdvertisementAdd() {
       .addJobAdvertisement(value)
       .then((result) => {
         console.log(result);
-        toast.success(result.data.message)
+        result.data.success?toast.success(result.data.message):toast.warning(result.data.message);
       });
   }
 

@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { Table, Icon, Menu } from "semantic-ui-react";
-import EmployerService from "../services/employerService";
+import { Table, Icon, Menu, Button, Header } from "semantic-ui-react";
+import EmployerService from "../../services/employerService";
+import { toast } from "react-toastify";
 
-export default function EmployerList() {
+export default function AdminEmployerActivateList() {
   const [employers, setEmployers] = useState([]);
 
   useEffect(() => {
     let employerService = new EmployerService();
     employerService
-      .getAllEmployers()
+      .getByActivatedFalseEmployers()
       .then((result) => setEmployers(result.data.data));
   }, []);
 
+  function activateEmployer(systemPersonnelId, employerId) {
+    let employerService = new EmployerService();
+    employerService
+      .activateEmployer(systemPersonnelId, employerId)
+      .then((result) =>
+        result.data.success
+          ? toast.success(result.data.message)
+          : toast.warning(result.data.message)
+      );
+  }
+
   return (
     <div>
+      <Header as="h1">Aktif Olmayan Firmalar</Header>
       <Table celled>
         <Table.Header>
           <Table.Row>
@@ -22,28 +35,27 @@ export default function EmployerList() {
             <Table.HeaderCell>Web Site</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
             <Table.HeaderCell>Phone Number</Table.HeaderCell>
-            <Table.HeaderCell>Activation Date</Table.HeaderCell>
+            <Table.HeaderCell>Aktif Edelim mi?</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {employers.map((employer) => (
-            <Table.Row key={employer.id}>
-              <Table.Cell>{employer.id}</Table.Cell>
-              <Table.Cell>{employer.companyName}</Table.Cell>
-              <Table.Cell>{employer.companyWebsite}</Table.Cell>
-              <Table.Cell>{employer.email}</Table.Cell>
-              <Table.Cell>{employer.phoneNumber}</Table.Cell>
-              {employer.activated === false ? (
+          {employers.map((employer) =>
+            employer ? (
+              <Table.Row key={employer.id}>
+                <Table.Cell>{employer.id}</Table.Cell>
+                <Table.Cell>{employer.companyName}</Table.Cell>
+                <Table.Cell>{employer.companyWebsite}</Table.Cell>
+                <Table.Cell>{employer.email}</Table.Cell>
+                <Table.Cell>{employer.phoneNumber}</Table.Cell>
                 <Table.Cell positive>
-                  <Icon name="close" />
-                  Aktif Değil
+                  <Button onClick={() => activateEmployer(15, employer.id)}>
+                    Et!
+                  </Button>
                 </Table.Cell>
-              ) : (
-                <Table.Cell>{employer.activationDate}</Table.Cell>
-              )}
-            </Table.Row>
-          ))}
+              </Table.Row>
+            ) : null
+          )}
         </Table.Body>
         <Table.Footer>
           <Table.Row>

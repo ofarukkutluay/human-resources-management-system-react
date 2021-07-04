@@ -1,12 +1,19 @@
 export const apiUrl = "http://localhost:8080/api";
 export const apiEmployersGetAll = apiUrl + "/employers/getall";
+export const apiEmployersGetByActivatedTrue = apiUrl + "/employers/getbyactivatedtrue";
+export const apiEmployersGetByActivatedFalse = apiUrl + "/employers/getbyactivatedfalse";
+export const apiActivateEmployer = apiUrl + "/employers/employerActivate"
 export const apiJobPositionsGetAll = apiUrl + "/jobpositions/getAll";
 export const apiCurriculumVitaesGetAll = apiUrl + "/curriculumvitaes/getall";
 export const apiJobAdvertisementGetAll = apiUrl + "/jobadvertisements/getall";
+export const apiJobAdvertisementGetByActivatedTrue = apiUrl + "/jobadvertisements/getbyactivatedtrue";
+export const apiJobAdvertisementGetByActivatedFalse = apiUrl + "/jobadvertisements/getbyactivatedfalse";
 export const apiJobAdvertisementAdd = apiUrl + "/jobadvertisements/add";
+export const apiActivateJobAdvertisement = apiUrl + "/jobadvertisements/activateJobAdvertisment"
 export const apiCityGetAll = apiUrl + "/cities/getall";
 export const apiForeignLanguageGetAll = apiUrl + "/foreignlanguages/getall";
 export const apiSchoolGetAll = apiUrl + "/schools/getall";
 export const apiSchoolAdd = apiUrl + "/schools/add";
 export const apiWayOfWorkingGetAll = apiUrl + "/wayofworkings/getall";
 export const apiWorkingTimeGetAll = apiUrl + "/workingtimes/getall";
+

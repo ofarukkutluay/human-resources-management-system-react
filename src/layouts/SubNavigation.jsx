@@ -33,9 +33,9 @@ export default function SubNavigation() {
         <Dropdown item text="More">
           <Dropdown.Menu>
             <Dropdown.Item>
-              <Link to="/jobpositions">
+              <Link to="/admin">
                 <Icon name="edit" />
-                İş Pozisyonları
+                Admin Dashbord
               </Link>
             </Dropdown.Item>
             <Dropdown.Item icon="globe" text="Choose Language" />
